@@ -103,7 +103,7 @@ function encode(textToTrad) {
       textTranslate += translateLatinCharacter(arrayCharacters[character]);
   }
   alert(textTranslate);
-  console.log(textTranslate);
+  //console.log(textTranslate);
 }
 
 //encode("Hello world")
@@ -150,6 +150,7 @@ function decode(morseToTrad) {
 //Fonction pour récupérer le texte entrer dans le html.
 
 function userRequest() {
+  //Je récupére les mots écrient par l'user.
   let stringToTranslate = document.getElementById("translate").value;
   //console.log(stringToTranslate);
   encode(stringToTranslate)
