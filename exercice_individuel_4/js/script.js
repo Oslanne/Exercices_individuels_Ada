@@ -36,9 +36,11 @@ function sapin(number) {
   }
   else {
     sapinBase(number);// exemple : Si number = 3
+
     for (let i = 0 ; i < number; i++) {
       spacesBefore = space.repeat(number - (i +1)); //number = 3 et i = 1 à la première boucle. soit spaceBefore = space * 1
       console.log(spacesBefore + "/" + leafsBase + addBranch.repeat(i) + "\\")
+      }
       //Si number = 3 (" " + "/" + "***" + ("**") + "\")  à la première boucle
       //Si number = 3 ("" + "/" + "***" + ("**" + "**") + "\")  à la deuxième boucle
     }
@@ -63,4 +65,19 @@ sapin(3)
 sapin(4)
 sapin(5)
 sapin(6)
-/* */
+/*
+       +
+      /*\      1
+     /***\     2
+    /*****\    3
+
+    /*****\    3
+   /*******\   4
+  /*********\  5
+
+  /*********\   5
+ /***********\  6
+/*************\ 7
+
+ 123 345 567
+ */
