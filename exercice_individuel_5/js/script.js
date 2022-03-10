@@ -26,14 +26,29 @@ function isValideDate(testDate) {
 
 function maxDaysInMonth(date) {
   dayDate = parseInt(date.substring(0,2));
-  console.log(dayDate);
   monthDate = parseInt(date.substring(3,5));
-  console.log(monthDate);
   if ( dayDate <= maxDaysByMonth[monthDate]){
-    console.log("pouette");
+    console.log("La date est : ");
   } else {
     console.log("It's a invalid date.");
   }
 }
 
-isValideDate("01/12/2022");
+//isValideDate("01/12/2022");
+
+function isPalindrome(testDate) {
+  dateSplit = testDate.split('/').join('');
+  //console.log(dateSplit)
+  dateBegin = dateSplit.substring(0, 4).split('').reverse().join('');
+  //console.log(dateBegin);
+  dateEnd = dateSplit.substring(4,8)
+  //console.log(dateEnd);
+  if (dateBegin == dateEnd){
+    console.log(true)
+  } else {
+    console.log(false)
+  }
+}
+
+isPalindrome("11/02/2011")
+isPalindrome("03/04/2001")
