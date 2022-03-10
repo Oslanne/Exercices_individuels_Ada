@@ -1,3 +1,4 @@
+import * as moment from 'moment';
 //Etape 1:
 
 const maxDaysByMonth = {
@@ -16,13 +17,16 @@ const maxDaysByMonth = {
 }
 
 function isValideDate(testDate) {
-  let dateRegex = /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
+  /*let dateRegex = /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
   if (dateRegex.test(testDate)) {
     maxDaysInMonth(testDate)
   } else {
     console.log("It's a invalid date.")
-  }
+  }*/
+  result = moment(testDate, 'DD/MM/YY', true).isValid();
+  console.log(result)
 }
+
 
 function maxDaysInMonth(date) {
   dayDate = parseInt(date.substring(0,2));
@@ -34,7 +38,7 @@ function maxDaysInMonth(date) {
   }
 }
 
-//isValideDate("01/12/2022");
+isValideDate("01/12/2022");
 
 function isPalindrome(testDate) {
   dateSplit = testDate.split('/').join('');
