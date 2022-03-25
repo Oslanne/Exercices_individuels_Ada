@@ -1,5 +1,9 @@
-import * as moment from 'moment';
+//import * as moment from 'moment';
+
+/*result = moment(testDate, 'DD/MM/YY', true).isValid();
+console.log(result)*/
 //Etape 1:
+
 
 const maxDaysByMonth = {
   01: 31,
@@ -17,14 +21,13 @@ const maxDaysByMonth = {
 }
 
 function isValideDate(testDate) {
-  /*let dateRegex = /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
+  let dateRegex = /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
   if (dateRegex.test(testDate)) {
     maxDaysInMonth(testDate)
   } else {
     console.log("It's a invalid date.")
-  }*/
-  result = moment(testDate, 'DD/MM/YY', true).isValid();
-  console.log(result)
+  }
+
 }
 
 
