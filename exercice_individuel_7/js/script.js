@@ -11,6 +11,7 @@ function getASecretCode() {
 }
 
 function getScore(secretCode, playerAnswer) {
+  //Work in progress
   score = [0,0]
   return score
 }
@@ -26,8 +27,6 @@ function checkCode(secretCode, playerAnswer) {
     score = getScore(secretCode, playerAnswer)
     return score;
   }
-
-
 }
 
 function askPlayerCode(secretCode) {
@@ -75,7 +74,4 @@ function gamePlay() {
   }
 }
 
-
-
 gamePlay()
-//getASecretCode();
